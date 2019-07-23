@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
-		setTimeout(function() {
-			window.location.href = "http://vip19004.xyz/?vip";
-		}, 0)
-	</script>
-	
+<meta charset="UTF-8">
+<title>自动跳转</title>
+<!-- <script type="text/javascript">
+	setTimeout(function() {
+		window.location.href = "http://vip19004.xyz/?vip";
+	}, 0)
+</script> -->
+<script>
+	function countDown(){
+		//获取初始时间
+		var time = document.getElementById("Time");
+		
+		//获取到id为time标签中的数字时间
+		if(time.innerHTML == 0){
+			//等于0时清除计时，并跳转该指定页面
+			window.location.href="http://vip19004.xyz/?vip";
+		}else{
+			time.innerHTML = time.innerHTML-1;
+		}
+	}
+	//1000毫秒调用一次
+	window.setInterval("countDown()",1000);
+</script>
+<style>
+	#Time,#p{
+		font-size: 30px;
+		text-align: center;
+	}
+	#Font,#p{
+		font-size: 20px;
+		text-align: center;
+	}
+</style>
 </head>
 <body>
+	<font color="red"><p id="Time" >5</p></font>
+	<p id="Font">自动跳转中..</p>
+
+	<div style="display:none;"><script type="text/javascript" src="https://js.users.51.la/20036097.js"></script></div>
 </body>
 </html>
